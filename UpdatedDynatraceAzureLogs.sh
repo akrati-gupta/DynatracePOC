@@ -13,8 +13,10 @@
 #     See the License for the specific language governing permissions and
 #     limitations under the License.
 
-readonly FUNCTION_ARM=dynatrace-azure-forwarder.json
+#readonly FUNCTION_ARM=dynatrace-azure-forwarder.json 
 readonly FUNCTION_ZIP_PACKAGE=dynatrace-azure-log-forwarder.zip
+readonly REPOSITORY_RELEASE_URL2=https://github.com/dynatrace-oss/dynatrace-azure-log-forwarder/releases/download/release-0.2.2/dynatrace-azure-log-forwarder.zip
+
 # Please be cautious with editing the following line, as CI is changing latest to specific version on release, see: .travis.yml
 readonly FUNCTION_REPOSITORY_RELEASE_URL=https://raw.githubusercontent.com/akrati-gupta/DynatracePOC/main/AzureLogForwarder.json
 readonly DYNATRACE_TARGET_URL_REGEX="^(https?:\/\/[-a-zA-Z0-9@:%._+~=]{1,255}\/?)(\/e\/[a-z0-9-]{36}\/?)?$"
@@ -438,8 +440,8 @@ if [[ $? != 0 ]]; then
 fi
 
 echo
-echo "- downloading function code zip [${REPOSITORY_RELEASE_URL}${FUNCTION_ZIP_PACKAGE}]"
-wget -q ${REPOSITORY_RELEASE_URL}${FUNCTION_ZIP_PACKAGE} -O ${FUNCTION_ZIP_PACKAGE}
+echo "- downloading function code zip [${REPOSITORY_RELEASE_URL2}${FUNCTION_ZIP_PACKAGE}]"
+wget -q ${REPOSITORY_RELEASE_URL2}${FUNCTION_ZIP_PACKAGE} -O ${FUNCTION_ZIP_PACKAGE}
 
 FUNCTIONAPP_NAME="${DEPLOYMENT_NAME}-function"
 echo
