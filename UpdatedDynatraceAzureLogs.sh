@@ -15,7 +15,7 @@
 
 #readonly FUNCTION_ARM=dynatrace-azure-forwarder.json 
 readonly FUNCTION_ZIP_PACKAGE=dynatrace-azure-log-forwarder.zip
-readonly REPOSITORY_RELEASE_URL2=https://github.com/dynatrace-oss/dynatrace-azure-log-forwarder/releases/download/release-0.2.2/dynatrace-azure-log-forwarder.zip
+readonly REPOSITORY_RELEASE_URL2=https://github.com/dynatrace-oss/dynatrace-azure-log-forwarder/releases/download/release-0.2.2/
 
 # Please be cautious with editing the following line, as CI is changing latest to specific version on release, see: .travis.yml
 readonly FUNCTION_REPOSITORY_RELEASE_URL=https://raw.githubusercontent.com/akrati-gupta/DynatracePOC/main/AzureLogForwarder.json
